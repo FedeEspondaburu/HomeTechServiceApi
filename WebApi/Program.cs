@@ -55,10 +55,11 @@ builder.Services.AddDbContext<Data.HomeTechServiceDBContext>(options =>
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<ICryptographyService, CryptographyService>();
+builder.Services.AddScoped<IServiceRequestService, ServiceRequestService>();
 
 //Data Repositories DI
 builder.Services.AddScoped<IUserRepository, UserRepository>();
-
+builder.Services.AddScoped<IServiceRequestRepository, ServiceRequestRepository>();
 
 #endregion
 
