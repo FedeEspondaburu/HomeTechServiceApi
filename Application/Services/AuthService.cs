@@ -44,7 +44,7 @@ namespace Application.Services
         {
             return new LoginResponseDto
             {
-                Expiration = DateTime.UtcNow.AddHours(1),
+                Expiration = DateTime.Now.AddHours(1),
                 Token = "Fake-JWT-Token", //TODO: Implement JWT token generation
                 Success = true
             };
