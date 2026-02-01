@@ -5,14 +5,14 @@ using Microsoft.AspNetCore.Mvc;
 namespace WebApi.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("auth")]
     public class AuthController : ControllerBase
     {
         private readonly IAuthService _authService;
         public AuthController(IAuthService authService) => _authService = authService;
 
 
-        [HttpPost]
+        [HttpPost("login")]
         public IActionResult Login(LoginRequestDto loginRequestDto)
         {
             var result = _authService.Login(loginRequestDto.EMail, loginRequestDto.Password);
